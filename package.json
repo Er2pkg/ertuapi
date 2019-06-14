@@ -1,0 +1,28 @@
+{
+  "name": "ertuapi",
+  "version": "1.3.0",
+  "description": "Just an API with functions",
+  "main": "index.js",
+  "dependencies": {
+    "centra": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qadik/ertuapi.git"
+  },
+  "keywords": [
+    "api",
+    "ertuapi",
+    "ertu"
+  ],
+  "author": "Ertu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qadik/ertuapi/issues"
+  },
+  "homepage": "https://github.com/Qadik/ertuapi/blob/master/README.md"
+}
