@@ -1,5 +1,7 @@
 # ErtuAPI Module
 ## By Ertu#2715 (Discord)
+[![NPM package](https://nodei.co/npm/ertuapi.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ertuapi/)
+
 ***
 # Initialization:
 ```js
