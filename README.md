@@ -1,6 +1,11 @@
 # ErtuAPI Module
 ## By Ertu#2715 (Discord)
-[![NPM package](https://nodei.co/npm/ertuapi.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ertuapi/)
+<p align='center'>
+<a href="https://www.npmjs.com/package/ertuapi"><img src="https://img.shields.io/npm/v/ertuapi.svg?maxAge=3600" alt="NPM version" /></a>
+<a href="https://www.npmjs.com/package/ertuapi"><img src="https://img.shields.io/npm/dt/ertuapi.svg?maxAge=3600" alt="NPM downloads" /></a>
+<a href="https://www.npmjs.com/package/ertuapi"><img src="https://img.shields.io/npm/l/ertuapi.svg" alt="License" /></a>
+<a href="https://github.com/Qadik/ertuapi/issues"><img src="https://img.shields.io/github/issues-raw/Qadik/ertuapi.svg" alt="Open Issuses"></a>
+</p>
 
 ***
 # Initialization:
