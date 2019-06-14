@@ -19,7 +19,7 @@ module.exports = class ErtuAPI {
     if (this.token === 'ertuapitest') console.warn('[ErtuAPI] Note: Key ertuapitest not recommend to use')
     /** @access private*/
     this.http = require('centra')(this.baseURL).header(
-      'TOKEN',
+      'token',
       `Bot ${this.token}`
     )
   /** 
@@ -32,7 +32,7 @@ module.exports = class ErtuAPI {
         'user': id,
         'time': time,
         'method': 'set'
-      })
+      }).send()
       return res.json()
     }
     this.profile = new Profile(this.token, options)
@@ -41,7 +41,7 @@ module.exports = class ErtuAPI {
    * @returns {Promise<MemeResponse>} Promise object with JSON of meme
   */
   async meme () {
-    const res = await this.http.path('/meme')
+    const res = await this.http.path('/meme').send()
     return res.json()
   }
   /** 
@@ -52,7 +52,7 @@ module.exports = class ErtuAPI {
     const res = await this.http.path('/profile').query({
       'user': id,
       'method': 'check'
-    })
+    }).send()
     return res.json()
   }
   /** 
@@ -63,7 +63,7 @@ module.exports = class ErtuAPI {
     const res = await this.http.path('/daily').query({
       'user': id,
       'method': 'info'
-    })
+    }).send()
     return res.json()
   }
   /**
@@ -71,7 +71,11 @@ module.exports = class ErtuAPI {
    * @returns {Number} Ping of ErtuAPI in ms
    */
   async ping (date) {
-    const res = await require('centra')(this.baseURL.toString().slice(0, -3)).path('/ping')
+    const res = await require('centra')(this.baseURL.toString().slice(0, -3)).path('/ping').send()
     return (date || Date.now()) - res.json().ts
+  }
+  async _headers (headers = {'token': `Bot ${this.token}`}) {
+    const res = await require('centra')(this.baseURL.toString().slice(0, -3)).path('/test').header(headers).send()
+    return res.json()
   }
 }
